@@ -1,0 +1,17 @@
+{
+  "name": "Communication Skills — Class 10 AI",
+  "short_name": "Comm Skills",
+  "description": "Animated presentation on Communication Skills for Class 10 AI students",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F4EFE6",
+  "theme_color": "#1C1C1C",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
