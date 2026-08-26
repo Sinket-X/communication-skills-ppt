@@ -210,11 +210,11 @@ function TitleSlide() {
       </motion.p>
 
       <motion.div variants={item} className="mt-10">
-                <span className="inline-flex items-center gap-3 border-[3px] border-ink bg-white px-6 py-3 font-display text-2xl uppercase tracking-wide shadow-[5px_5px_0_0_var(--color-ink)]">
+        <span className="inline-flex items-center gap-3 border-[3px] border-ink bg-white px-6 py-3 font-display text-2xl uppercase tracking-wide shadow-[5px_5px_0_0_var(--color-ink)]">
           <PenLine className="size-6" strokeWidth={2.5} />
           By <span className="bg-blaze px-2">Prabhat Sahu</span>
         </span>
-        <div className="mt-4 flex flex-wrap items-center gap-2">
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
           {["Jatin", "Rashi", "Adnan", "Bhavesh", "Garima"].map((name) => (
             <span
               key={name}
@@ -225,6 +225,7 @@ function TitleSlide() {
           ))}
         </div>
       </motion.div>
+    </motion.div>
   );
 }
 
@@ -754,6 +755,183 @@ function ListeningSlide() {
 /* 11 — Quick Quiz (interactive)                                       */
 /* ------------------------------------------------------------------ */
 
+
+function ProsConsSlide() {
+  return (
+    <SlideFrame number={11} kicker="Pros & Cons" title="Types of Communication" accent="bg-ember">
+      <motion.div variants={container} className="grid h-full grid-cols-2 gap-6">
+        <motion.div variants={item} className="border-[3px] border-ink bg-white p-6 shadow-[5px_5px_0_0_var(--color-ink)] flex flex-col">
+           <h3 className="font-display text-2xl uppercase">Verbal</h3>
+           <p className="font-bold text-leaf mt-2">Pros: Quick, instant feedback.</p>
+           <p className="font-bold text-blaze mt-1">Cons: No record, easily forgotten.</p>
+           <h3 className="font-display text-2xl uppercase mt-4">Written</h3>
+           <p className="font-bold text-leaf mt-2">Pros: Permanent record, precise.</p>
+           <p className="font-bold text-blaze mt-1">Cons: Takes time, delayed feedback.</p>
+        </motion.div>
+        <motion.div variants={item} className="border-[3px] border-ink bg-white p-6 shadow-[5px_5px_0_0_var(--color-ink)] flex flex-col">
+           <h3 className="font-display text-2xl uppercase">Non-Verbal</h3>
+           <p className="font-bold text-leaf mt-2">Pros: Shows true feelings.</p>
+           <p className="font-bold text-blaze mt-1">Cons: Can be misunderstood.</p>
+           <h3 className="font-display text-2xl uppercase mt-4">Visual</h3>
+           <p className="font-bold text-leaf mt-2">Pros: Easy to understand quickly.</p>
+           <p className="font-bold text-blaze mt-1">Cons: Hard to explain complex ideas.</p>
+        </motion.div>
+      </motion.div>
+    </SlideFrame>
+  );
+}
+
+function FeedbackSlide() {
+  return (
+    <SlideFrame number={12} kicker="The Loop" title="Feedback in Communication" accent="bg-ocean">
+      <motion.div variants={container} className="flex h-full flex-col gap-5">
+        <motion.div variants={item} className="border-[3px] border-ink bg-white p-5 shadow-[5px_5px_0_0_var(--color-ink)]">
+          <p className="text-xl font-bold">Feedback is the receiver's response to the sender's message. It completes the communication cycle.</p>
+        </motion.div>
+        <div className="grid grid-cols-2 gap-5 flex-1">
+          <motion.div variants={item} className="border-[3px] border-ink bg-blaze p-5 shadow-[5px_5px_0_0_var(--color-ink)]">
+            <h3 className="font-display text-xl uppercase text-white">Importance</h3>
+            <ul className="mt-2 list-inside list-disc font-semibold text-white space-y-2">
+              <li>Confirms message was received</li>
+              <li>Helps improve future communication</li>
+              <li>Builds better relationships</li>
+            </ul>
+          </motion.div>
+          <motion.div variants={item} className="border-[3px] border-ink bg-leaf p-5 shadow-[5px_5px_0_0_var(--color-ink)]">
+            <h3 className="font-display text-xl uppercase">Types of Feedback</h3>
+            <ul className="mt-2 list-inside list-disc font-semibold space-y-2">
+              <li><span className="font-bold">Positive:</span> "Great job!"</li>
+              <li><span className="font-bold">Negative:</span> "This needs work."</li>
+              <li><span className="font-bold">Constructive:</span> "Good, but try this."</li>
+            </ul>
+          </motion.div>
+        </div>
+      </motion.div>
+    </SlideFrame>
+  );
+}
+
+function PartsOfSpeechSlide() {
+  return (
+    <SlideFrame number={13} kicker="Writing Basics I" title="Parts of Speech" accent="bg-leaf">
+      <motion.div variants={container} className="grid h-full grid-cols-2 gap-6">
+        <motion.div variants={item} className="border-[3px] border-ink bg-white p-5 shadow-[5px_5px_0_0_var(--color-ink)]">
+          <h3 className="font-display text-2xl uppercase border-b-[3px] border-ink pb-2 mb-3">Core Parts</h3>
+          <ul className="space-y-4 font-semibold text-[15px]">
+            <li><span className="bg-blaze px-1 text-white border-[2px] border-ink">Noun:</span> Name of person, place, thing.</li>
+            <li><span className="bg-ocean px-1 text-white border-[2px] border-ink">Pronoun:</span> Replaces a noun (he, she, it).</li>
+            <li><span className="bg-ember px-1 text-white border-[2px] border-ink">Verb:</span> Action word (run, write).</li>
+            <li><span className="bg-leaf px-1 border-[2px] border-ink">Adjective:</span> Describes a noun.</li>
+            <li><span className="bg-ink px-1 text-white border-[2px] border-ink">Adverb:</span> Describes a verb.</li>
+          </ul>
+        </motion.div>
+        <motion.div variants={item} className="border-[3px] border-ink bg-ocean p-5 shadow-[5px_5px_0_0_var(--color-ink)] text-white">
+          <h3 className="font-display text-2xl uppercase border-b-[3px] border-white pb-2 mb-3">Punctuation</h3>
+          <ul className="space-y-4 font-semibold text-[15px]">
+            <li><span className="font-bold font-display text-xl mr-2 bg-white text-ocean px-2 py-0.5 border-[2px] border-ink">.</span> Full stop (Ends sentence)</li>
+            <li><span className="font-bold font-display text-xl mr-2 bg-white text-ocean px-2 py-0.5 border-[2px] border-ink">,</span> Comma (Brief pause)</li>
+            <li><span className="font-bold font-display text-xl mr-2 bg-white text-ocean px-2 py-0.5 border-[2px] border-ink">?</span> Question Mark (Asking)</li>
+            <li><span className="font-bold font-display text-xl mr-2 bg-white text-ocean px-2 py-0.5 border-[2px] border-ink">!</span> Exclamation (Strong emotion)</li>
+            <li className="mt-6 border-[2px] border-white p-3"><span className="underline uppercase tracking-wider text-sm">Capitalise:</span><br/> First word, names, and 'I'.</li>
+          </ul>
+        </motion.div>
+      </motion.div>
+    </SlideFrame>
+  );
+}
+
+function SentencesSlide() {
+  return (
+    <SlideFrame number={14} kicker="Writing Basics II" title="Sentences" accent="bg-blaze">
+      <motion.div variants={container} className="flex h-full flex-col gap-4">
+        <motion.div variants={item} className="border-[3px] border-ink bg-white p-4 shadow-[4px_4px_0_0_var(--color-ink)]">
+          <p className="text-lg font-bold">A sentence is a group of words that makes complete sense.</p>
+          <p className="text-md font-semibold text-muted-foreground mt-2"><span className="text-ink">Parts:</span> Subject (who/what) + Predicate (action/info).</p>
+        </motion.div>
+        <div className="grid grid-cols-2 gap-4 flex-1">
+          <motion.div variants={item} className="border-[3px] border-ink bg-ember p-4 shadow-[4px_4px_0_0_var(--color-ink)]">
+            <h3 className="font-display text-xl uppercase mb-3">Kinds of Sentences</h3>
+            <ul className="space-y-3 font-semibold text-sm">
+              <li>1. <span className="font-bold bg-white px-1 border-[2px] border-ink">Assertive:</span> States a fact.</li>
+              <li>2. <span className="font-bold bg-white px-1 border-[2px] border-ink">Interrogative:</span> Asks a question.</li>
+              <li>3. <span className="font-bold bg-white px-1 border-[2px] border-ink">Imperative:</span> Gives a command.</li>
+              <li>4. <span className="font-bold bg-white px-1 border-[2px] border-ink">Exclamatory:</span> Shows emotion.</li>
+            </ul>
+          </motion.div>
+          <motion.div variants={item} className="border-[3px] border-ink bg-leaf p-4 shadow-[4px_4px_0_0_var(--color-ink)]">
+            <h3 className="font-display text-xl uppercase mb-3">Phrases</h3>
+            <p className="font-semibold text-sm">A group of words without a subject and verb. It makes sense, but not complete sense.</p>
+            <div className="mt-4 font-bold bg-white border-[2px] border-ink p-3 text-sm">
+              <span className="text-muted-foreground uppercase text-xs block mb-1">Examples:</span>
+              "in the morning"<br/>"on the table"
+            </div>
+          </motion.div>
+        </div>
+      </motion.div>
+    </SlideFrame>
+  );
+}
+
+function ActivePassiveSlide() {
+  return (
+    <SlideFrame number={15} kicker="Writing Basics III" title="Active & Passive Voice" accent="bg-ocean">
+      <motion.div variants={container} className="grid h-full grid-cols-2 gap-6">
+        <motion.div variants={item} className="border-[3px] border-ink bg-white p-6 shadow-[5px_5px_0_0_var(--color-ink)] flex flex-col">
+          <h3 className="font-display text-3xl uppercase text-blaze">Active Voice</h3>
+          <p className="mt-3 text-lg font-semibold">The subject performs the action.</p>
+          <div className="mt-6 border-l-[4px] border-blaze pl-4">
+            <p className="font-bold text-sm uppercase tracking-wider text-muted-foreground">Formula:</p>
+            <p className="font-bold mt-1 text-lg">Subject + Verb + Object</p>
+          </div>
+          <div className="mt-auto border-[3px] border-ink bg-paper p-4 text-center">
+            <p className="font-bold italic text-lg">"Ram writes a letter."</p>
+          </div>
+        </motion.div>
+        <motion.div variants={item} className="border-[3px] border-ink bg-white p-6 shadow-[5px_5px_0_0_var(--color-ink)] flex flex-col">
+          <h3 className="font-display text-3xl uppercase text-ocean">Passive Voice</h3>
+          <p className="mt-3 text-lg font-semibold">The subject receives the action.</p>
+          <div className="mt-6 border-l-[4px] border-ocean pl-4">
+            <p className="font-bold text-sm uppercase tracking-wider text-muted-foreground">Formula:</p>
+            <p className="font-bold mt-1 text-lg">Object + Verb + Subject</p>
+          </div>
+          <div className="mt-auto border-[3px] border-ink bg-paper p-4 text-center">
+            <p className="font-bold italic text-lg">"A letter is written by Ram."</p>
+          </div>
+        </motion.div>
+      </motion.div>
+    </SlideFrame>
+  );
+}
+
+function ParagraphsSlide() {
+  return (
+    <SlideFrame number={16} kicker="Writing Basics IV" title="Paragraph Construction" accent="bg-ember">
+      <motion.div variants={container} className="flex h-full flex-col gap-5">
+        <motion.div variants={item} className="border-[3px] border-ink bg-blaze p-5 text-white shadow-[5px_5px_0_0_var(--color-ink)]">
+          <p className="text-xl font-bold">A paragraph is a group of sentences organised around a single topic or idea.</p>
+        </motion.div>
+        <div className="flex-1 grid grid-cols-3 gap-4">
+          <motion.div variants={item} className="border-[3px] border-ink bg-white p-4 shadow-[4px_4px_0_0_var(--color-ink)] text-center flex flex-col justify-center items-center">
+             <span className="grid size-12 place-items-center border-[3px] border-ink bg-ocean font-display text-2xl text-white mb-4">1</span>
+             <h4 className="font-display uppercase text-[16px]">Topic Sentence</h4>
+             <p className="text-[13px] font-semibold text-muted-foreground mt-2">Introduces the main idea.</p>
+          </motion.div>
+          <motion.div variants={item} className="border-[3px] border-ink bg-white p-4 shadow-[4px_4px_0_0_var(--color-ink)] text-center flex flex-col justify-center items-center">
+             <span className="grid size-12 place-items-center border-[3px] border-ink bg-leaf font-display text-2xl mb-4">2</span>
+             <h4 className="font-display uppercase text-[16px]">Supporting Details</h4>
+             <p className="text-[13px] font-semibold text-muted-foreground mt-2">Explains and gives examples.</p>
+          </motion.div>
+          <motion.div variants={item} className="border-[3px] border-ink bg-white p-4 shadow-[4px_4px_0_0_var(--color-ink)] text-center flex flex-col justify-center items-center">
+             <span className="grid size-12 place-items-center border-[3px] border-ink bg-ember font-display text-2xl mb-4">3</span>
+             <h4 className="font-display uppercase text-[16px]">Closing Sentence</h4>
+             <p className="text-[13px] font-semibold text-muted-foreground mt-2">Summarises the paragraph.</p>
+          </motion.div>
+        </div>
+      </motion.div>
+    </SlideFrame>
+  );
+}
+
 const QUIZ = [
   {
     q: "Waving your hand to say hello is...",
@@ -857,7 +1035,7 @@ const RECAP = [
 
 function RecapSlide({ onRestart }: SlideCtx) {
   return (
-    <SlideFrame number={12} kicker="Remember This" title="Key Takeaways" accent="bg-leaf">
+    <SlideFrame number={17} kicker="Remember This" title="Key Takeaways" accent="bg-leaf">
       <motion.div variants={container} className="flex h-full flex-col gap-5">
         <div className="grid grid-cols-3 gap-4">
           {RECAP.map((r) => (
@@ -981,6 +1159,46 @@ export const SLIDES: Slide[] = [
     render: () => <ListeningSlide />,
   },
   {
+    id: "feedback",
+    kicker: "The Loop",
+    title: "Feedback in Communication",
+    accent: "bg-ocean",
+    duration: 12,
+    render: () => <FeedbackSlide />,
+  },
+  {
+    id: "parts-of-speech",
+    kicker: "Writing Basics I",
+    title: "Parts of Speech",
+    accent: "bg-leaf",
+    duration: 12,
+    render: () => <PartsOfSpeechSlide />,
+  },
+  {
+    id: "sentences",
+    kicker: "Writing Basics II",
+    title: "Sentences",
+    accent: "bg-blaze",
+    duration: 12,
+    render: () => <SentencesSlide />,
+  },
+  {
+    id: "active-passive",
+    kicker: "Writing Basics III",
+    title: "Active & Passive Voice",
+    accent: "bg-ocean",
+    duration: 12,
+    render: () => <ActivePassiveSlide />,
+  },
+  {
+    id: "paragraphs",
+    kicker: "Writing Basics IV",
+    title: "Paragraph Construction",
+    accent: "bg-ember",
+    duration: 12,
+    render: () => <ParagraphsSlide />,
+  },
+{
     id: "quiz",
     kicker: "Test Yourself",
     title: "Quick Quiz",

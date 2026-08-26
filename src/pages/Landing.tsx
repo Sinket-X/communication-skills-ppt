@@ -145,10 +145,13 @@ export default function Landing() {
                 hidden: { opacity: 0, y: 24 },
                 show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: EASE } },
               }}
-              className="mt-6 flex w-fit items-center gap-2.5 border-[3px] border-ink bg-white px-4 py-2 font-display text-sm uppercase tracking-wide shadow-[4px_4px_0_0_var(--color-ink)]"
+              className="mt-6 flex flex-wrap w-fit items-center gap-2.5 border-[3px] border-ink bg-white px-4 py-2 font-display text-xs sm:text-sm uppercase tracking-wide shadow-[4px_4px_0_0_var(--color-ink)]"
             >
               <PenLine className="size-4" strokeWidth={2.5} />
               By <span className="bg-blaze px-1">Prabhat Sahu</span>
+              <span className="sm:border-l-2 sm:border-ink sm:pl-2 text-muted-foreground text-[10px] sm:text-xs">
+                Contributors: Jatin, Bhavesh, Garima, Rashi, Adnan
+              </span>
             </motion.div>
 
             <motion.div
@@ -385,8 +388,9 @@ export default function Landing() {
             </p>
           </div>
         </div>
-        <p className="text-xs font-medium text-muted-foreground">
-          Made by <span className="font-bold text-ink">Prabhat Sahu</span>
+        <p className="text-[10px] sm:text-xs font-medium text-muted-foreground text-center md:text-right">
+          Made by <span className="font-bold text-ink">Prabhat Sahu</span><br className="md:hidden" />
+          <span className="hidden md:inline"> | </span>Contributors: Jatin, Bhavesh, Garima, Rashi, Adnan
         </p>
       </footer>
     </div>
