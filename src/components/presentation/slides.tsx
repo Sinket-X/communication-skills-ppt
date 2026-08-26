@@ -210,12 +210,21 @@ function TitleSlide() {
       </motion.p>
 
       <motion.div variants={item} className="mt-10">
-        <span className="inline-flex items-center gap-3 border-[3px] border-ink bg-white px-6 py-3 font-display text-2xl uppercase tracking-wide shadow-[5px_5px_0_0_var(--color-ink)]">
+                <span className="inline-flex items-center gap-3 border-[3px] border-ink bg-white px-6 py-3 font-display text-2xl uppercase tracking-wide shadow-[5px_5px_0_0_var(--color-ink)]">
           <PenLine className="size-6" strokeWidth={2.5} />
           By <span className="bg-blaze px-2">Prabhat Sahu</span>
         </span>
+        <div className="mt-4 flex flex-wrap items-center gap-2">
+          {["Jatin", "Rashi", "Adnan", "Bhavesh", "Garima"].map((name) => (
+            <span
+              key={name}
+              className="border-2 border-ink bg-white px-3 py-1 font-display text-sm uppercase tracking-wide shadow-[3px_3px_0_0_var(--color-ink)]"
+            >
+              {name}
+            </span>
+          ))}
+        </div>
       </motion.div>
-    </motion.div>
   );
 }
 
